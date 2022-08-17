@@ -77,6 +77,7 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({
 								<img
 									src="/codewars.svg"
 									className="w-full h-full"
+									alt="logo"
 								/>
 							</div>
 						) : (
