@@ -78,7 +78,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
 					lang="javascript"
 					theme={editorTheme}
 					extensions={[javascript()]}
-					className={className}
+					className={`${className} ${isFullscreen && 'mobile-full'}`}
 					basicSetup={{
 						autocompletion: false,
 					}}
