@@ -1,5 +1,5 @@
 import { createContext, FC, ReactNode, useContext, useReducer } from 'react';
-import { kataService } from '../services/kata.service';
+import { kataService } from '../services';
 
 export type TestError = {
 	name: string | undefined;
