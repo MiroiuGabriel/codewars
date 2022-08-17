@@ -51,7 +51,7 @@ export const EditorPanel = () => {
 			<CodeEditor
 				height="100%"
 				value={code}
-				className="text-sm h-full"
+				className="text-sm h-96 md:h-full"
 				wrapperStyle="md:h-[60%] mb-5"
 				headerTitle="Solution"
 				onChange={(value, _) => {
@@ -63,7 +63,7 @@ export const EditorPanel = () => {
 				height="100%"
 				maxHeight="100%"
 				wrapperStyle="md:h-[40%] mb-5"
-				className={`text-sm ${withError} h-full`}
+				className={`text-sm ${withError} h-52 md:h-full`}
 				headerTitle="Sample Tests"
 				onChange={(value, _) => {
 					updateFixtures(value);
