@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3001';
+const baseUrl = import.meta.env.VITE_SERVER_URL;
 
 export const routes = {
 	testKata: `${baseUrl}/kata/test`,
