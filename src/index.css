@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: sans-serif, Proxima Nova, system-ui;
+		background-color: #e4e4e7;
+	}
+
+	body.overflow-hidden {
+		overflow: hidden;
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+		background-color: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: red;
+		background: #424242;
+		border-radius: 8px;
+	}
+	::-webkit-scrollbar-track {
+		background: transparent;
+		border-radius: 8px;
+	}
+
+	html[data-theme='dark'] {
+		background-color: #16171b;
+	}
+}
+
+@layer utilities {
+	.is-fullscreen {
+		padding: 10px;
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 49;
+		background-attachment: fixed;
+		overflow: hidden;
+	}
+	.code-highlight {
+		@apply prose-code:border prose-code:border-gray-300 dark:prose-code:border-[#ffffff20] prose-code:rounded-[.25rem] prose-code:text-[.875em] prose-code:font-mono prose-code:px-1 prose-code:py-[2px] prose-code:whitespace-pre prose-code:before:content-none prose-code:after:content-none prose-code:font-normal;
+	}
+}
+
+@layer components {
+	.btn {
+		@apply text-blue-500 hover:text-blue-700 dark:text-[#6795de] bg-gray-100 dark:bg-[#00000033] border border-[#6795de] text-sm rounded transition-colors duration-150 ease-in-out px-3 py-1 uppercase flex flex-row items-center text-center dark:active:bg-[#292b2b] dark:hover:bg-[#0b0c0c] dark:hover:text-[#91b2e7];
+	}
+
+	.btn.no-border {
+		@apply border-transparent;
+	}
+
+	.btn.full {
+		@apply bg-blue-500 text-gray-200 active:bg-blue-400 dark:bg-[#6795de] dark:text-[#131414] dark:hover:bg-[#7ca4e3] dark:active:bg-[#91b2e7];
+	}
+
+	.btn:disabled {
+		@apply disabled:bg-transparent disabled:hover:bg-transparent disabled:border-[#616161] disabled:text-[#616161];
+	}
+
+	.btn.success {
+		@apply bg-green-600 dark:bg-[#7c9a44] dark:hover:bg-[#8aac4c] dark:active:bg-[#96b65b] text-gray-200 dark:text-[#131414] px-[17px];
+	}
+
+	.tab {
+		@apply px-4 py-2 rounded-lg text-[#555] dark:text-[#c0c0c0] dark:hover:text-[#6795de] hover:text-[#2889cc] transition-colors duration-200 ease-in-out cursor-pointer;
+	}
+
+	.tab.active {
+		@apply dark:text-[#ebebeb] text-gray-700 bg-[#ffffff80] dark:bg-[#ffffff10];
+	}
+
+	.separator-dark {
+		display: block;
+		height: 1px;
+		background-image: linear-gradient(
+			to left,
+			transparent,
+			rgba(255, 255, 255, 0.125) 20%,
+			rgba(255, 255, 255, 0.125) 80%,
+			transparent
+		);
+		background-size: 100% 1px;
+		border-color: transparent;
+	}
+	.separator {
+		display: block;
+		height: 1px;
+		background-image: linear-gradient(
+			to left,
+			transparent,
+			#d4d4d8 20%,
+			#d4d4d8 80%,
+			transparent
+		);
+		background-size: 100% 1px;
+		border-color: transparent;
+	}
+}
