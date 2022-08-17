@@ -49,11 +49,10 @@ export const EditorPanel = () => {
 	return (
 		<div className="flex flex-col w-full md:w-7/12">
 			<CodeEditor
-				minHeight="500px"
 				height="100%"
 				value={code}
 				className="text-sm h-full"
-				wrapperStyle="h-[60%] mb-5"
+				wrapperStyle="md:h-[60%] mb-5"
 				headerTitle="Solution"
 				onChange={(value, _) => {
 					updateCode(value);
@@ -63,8 +62,7 @@ export const EditorPanel = () => {
 				value={fixtures}
 				height="100%"
 				maxHeight="100%"
-				minHeight="150px"
-				wrapperStyle="h-[40%] mb-5"
+				wrapperStyle="md:h-[40%] mb-5"
 				className={`text-sm ${withError} h-full`}
 				headerTitle="Sample Tests"
 				onChange={(value, _) => {

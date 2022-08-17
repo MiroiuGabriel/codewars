@@ -19,7 +19,7 @@ export const Output = () => {
 
 	return (
 		<div
-			className={`bg-white dark:bg-[#131414] ${status} rounded-lg border-2 min-h-[200px] h-full`}
+			className={`bg-white dark:bg-[#131414] ${status} rounded-lg border-2 min-h-[200px] h-full overflow-y-auto`}
 		>
 			{header && (
 				<div className="flex flex-row space-x-3 p-4 text-[#444] dark:text-[#eaeaea] border border-[#0000001a] dark:border-[#fff3] text-sm font-mono">

@@ -43,14 +43,14 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
 	}, [isFullscreen]);
 
 	return (
-		<div className={`flex flex-col ${wrapperStyle}`}>
+		<div className={`flex flex-col ${wrapperStyle} overflow-clip`}>
 			{isFullscreen && (
 				<ExpandIcon
 					className="w-5 h-5 dark:text-[#c0c0c0] cursor-pointer hover:text-[#6795de] dark:hover:text-[#6795de] transition-colors ease-in-out duration-200 fixed z-50 top-2 right-2"
 					onClick={() => setIsFullscreen(false)}
 				/>
 			)}
-			<div className="flex flex-row p-2 rounded-tr-lg rounded-tl-lg bg-[#ececee] dark:bg-[#222327] items-center justify-between">
+			<div className="flex flex-row p-2 rounded-tr-lg rounded-tl-lg bg-[#ececee] dark:bg-[#222327] items-center justify-between sticky z-30">
 				<p className="text-sm font-bold text-gray-800 dark:text-white capitalize">
 					{headerTitle}
 				</p>
@@ -60,7 +60,7 @@ export const CodeEditor: React.FC<CodeEditorProps> = ({
 				/>
 			</div>
 			<div
-				className={`flex flex-col h-full${
+				className={`flex flex-col h-full ${
 					isFullscreen
 						? ' is-fullscreen dark:bg-[#16171b] bg-[#e4e4e7]'
 						: ''

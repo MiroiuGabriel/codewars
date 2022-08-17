@@ -47,6 +47,10 @@
 	.code-highlight {
 		@apply prose-code:border prose-code:border-gray-300 dark:prose-code:border-[#ffffff20] prose-code:rounded-[.25rem] prose-code:text-[.875em] prose-code:font-mono prose-code:px-1 prose-code:py-[2px] prose-code:whitespace-pre prose-code:before:content-none prose-code:after:content-none prose-code:font-normal;
 	}
+
+	.myClass {
+		contain: content;
+	}
 }
 
 @layer components {
